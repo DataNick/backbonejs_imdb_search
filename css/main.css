@@ -1,8 +1,13 @@
-img {
+/*img {
   display: block;
   margin: 0 auto;
+}*/
+
+.row .col.s7{
+  width: 45%;
+  padding-left: 10%;
 }
 
-h1 {
+h2 {
   color: #5c6bc0;
 }
