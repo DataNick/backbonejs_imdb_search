@@ -14,37 +14,40 @@ MovieApp.Views.Search = Backbone.View.extend({
   },
 
   getMovies: function(){
+    // console.log("start getMovies");
     if (!this.$el.find('#new-search').val().trim()){
       return;
     }
     else {
       var title = this.$el.find('input').val();
     }
-    // var movies = new MovieApp.Collections.Movies({title: title});
+
     var movies = new MovieApp.Models.Movies({title: title})
     movies.fetch({success: this.renderMovies.bind(this)});
 
-    // var poster = $.ajax {
-    //   url: this.model.attributes.Poster;
-    // }
+    // console.log("Ending getMovies");
   },
 
   newSearch: function(e){
+    // console.log("start newSearch");
     if (e.which !== 13 || !this.$el.find('#new-search').val().trim()){
       return;
     }
     this.getMovies();
+    // console.log("newSearch ending")
 
   },
 
   renderMovies: function(movies){
-    console.log('renderMovies hit')
-    console.log(this.input)
+    console.log('renderMovies hit');
+    // console.log(this.input)
     var movieview;
 
     movieview = new MovieApp.Views.MovieView({model: movies});
     this.$el.find('#movie-list').html(movieview.render().el);
     this.$el.find('#new-search').val('');
+    console.log('Ending renderMovies hit');
+
   },
 
   events: {
