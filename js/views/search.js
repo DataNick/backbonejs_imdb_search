@@ -39,14 +39,14 @@ MovieApp.Views.Search = Backbone.View.extend({
   },
 
   renderMovies: function(movies){
-    console.log('renderMovies hit');
+    // console.log('renderMovies hit');
     // console.log(this.input)
     var movieview;
 
     movieview = new MovieApp.Views.MovieView({model: movies});
     this.$el.find('#movie-list').html(movieview.render().el);
     this.$el.find('#new-search').val('');
-    console.log('Ending renderMovies hit');
+    // console.log('Ending renderMovies hit');
 
   },
 
