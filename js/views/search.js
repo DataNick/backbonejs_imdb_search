@@ -2,7 +2,7 @@ MovieApp.Views.Search = Backbone.View.extend({
 
 
   template: "<input id = 'new-search' type = 'text' placeholder = 'search'> \
-            <button>Search Movie</button> \
+            <button class ='btn'>Search Movie</button> \
             <div id = 'movie-list'></div>",
 
   initialize: function(options) {},
