@@ -9,8 +9,8 @@ MovieApp.Views.MovieView = Backbone.View.extend({
   },
 
   render: function(){
-    this.$el.html("<h1>" + this.model.attributes.Title+"</h1>"+"<p>"+this.model.attributes.Year+"</p>" + this.model.attributes.Plot);
-    this.$el.append("<div><img src=" + this.model.attributes.Poster + "/></div>");
+    this.$el.html("<h1>" + this.model.attributes.Title + "</h1>" + "<p>"+this.model.attributes.Year+"</p>" + "<div class = 'plot'>" + this.model.attributes.Plot) + "</div>" + this.$el.append("<div><img src=" + this.model.attributes.Poster + "/></div>");
+    // this.$el.append("<div><img src=" + this.model.attributes.Poster + "/></div>");
     return this;
   }
 });
