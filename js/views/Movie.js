@@ -1,8 +1,5 @@
 MovieApp.Views.MovieView = Backbone.View.extend({
 
-
-
-
   initialize: function(options) {
     if (options.model)
       this.model = options.model;
