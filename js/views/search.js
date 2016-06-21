@@ -44,7 +44,7 @@ MovieApp.Views.Search = Backbone.View.extend({
 
     movieview = new MovieApp.Views.MovieView({model: movies});
     this.$el.find('#movie-list').html(movieview.render().el);
-
+    this.$el.find('#new-search').val('');
   },
 
   events: {
